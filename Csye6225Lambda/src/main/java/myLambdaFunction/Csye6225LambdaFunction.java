@@ -81,7 +81,7 @@ public class Csye6225LambdaFunction implements RequestHandler<SNSEvent,Object>{
         HashMap<String, AttributeValue> item_value= new HashMap<String, AttributeValue>();
         item_value.put("userName",new AttributeValue(userEmail));
         item_value.put("password",new AttributeValue(userPassToken));
-        Long timeToLive= Instant.now().getEpochSecond()+1200;
+        Long timeToLive= Instant.now().getEpochSecond()+60;
         item_value.put("TimeToLive",new AttributeValue(timeToLive.toString()));
 
         try
